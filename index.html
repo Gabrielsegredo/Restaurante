@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardápio do Restaurante</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background-color: #004c3f;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            font-size: 24px;
+        }
+        #menu {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+        .meal {
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            flex-basis: 30%;
+            text-align: center;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .meal img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+        }
+        .meal h2 {
+            color: #004c3f;
+            margin: 0.5em 0;
+        }
+        .description {
+            color: #666;
+            font-size: 14px;
+        }
+        .speak {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 16px;
+            background-color: #004c3f;
+            color: white;
+            border-radius: 4px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .speak:hover {
+            background-color: #003429;
+        }
+    </style>
+</head>
+<body>
+    <header>Cardápio do Restaurante</header>
+    <div id="menu">
+        <!-- Repita este bloco para cada prato -->
+        <div class="meal">
+            <img src="comida 2.avif" alt="Nome do Prato 1">
+            <h2>Prato 1</h2>
+            <p class="description">Strogonoff de carne com cogumelo, arroz e farofa.</p>
+            <span class="speak" onclick="speak(this.previousElementSibling.innerText)">Ouvir Descrição</span>
+        </div>
+        <div class="meal">
+            <img src="5.png" alt="Nome do Prato 2">
+            <h2>Prato 2</h2>
+            <p class="description">Salmão grelhado com Farofa e aspargos.</p>
+            <span class="speak" onclick="speak(this.previousElementSibling.innerText)">Ouvir Descrição</span>
+        </div>
+        <div class="meal">
+            <img src="imagem 1 .png" alt="Nome do Prato 3">
+            <h2>Prato 3</h2>
+            <p class="description">Macarrão com queijo mozzarella e parmesão gratinado no forno.</p>
+            <span class="speak" onclick="speak(this.previousElementSibling.innerText)">Ouvir Descrição</span>
+        </div>
+        <div class="meal">
+            <img src="Comida 1.webp" alt="Nome do Prato 4">
+            <h2>Prato 4</h2>
+            <p class="description">Arroz,Feião,Batata frita e Picanha grelhada .</p>
+            <span class="speak" onclick="speak(this.previousElementSibling.innerText)">Ouvir Descrição</span>
+        </div>
+        <div class="meal">
+            <img src="pizza.png" alt="Nome do Prato 5">
+            <h2>Prato 5</h2>
+            <p class="description">Pizza de quatro queijos com massa fina crocante.</p>
+            <span class="speak" onclick="speak(this.previousElementSibling.innerText)">Ouvir Descrição</span>
+        </div>
+        <div class="meal">
+            <img src="camarão.png" alt="Nome do Prato 6">
+            <h2>Prato 6</h2>
+            <p class="description">Risoto de camarão com alho-poró e creme de leite fresco.</p>
+            <span class="speak" onclick="speak(this.previousElementSibling.innerText)">Ouvir Descrição</span>
+        </div>
+        <div class="meal">
+            <img src="tapioca.png" alt="Nome do Prato 7">
+            <h2>Prato 7</h2>
+            <p class="description">Tapioca de carne seca desfiado com queijo.</p>
+            <span class="speak" onclick="speak(this.previousElementSibling.innerText)">Ouvir Descrição</span>
+        </div>
+        <div class="meal">
+            <img src="queijo .png" alt="Nome do Prato 8">
+            <h2>Prato 8</h2>
+            <p class="description">Taboa com queijo, Alcatra frita em tirar e Mandioca frita.</p>
+            <span class="speak" onclick="speak(this.previousElementSibling.innerText)">Ouvir Descrição</span>
+        </div>
+        <div class="meal">
+            <img src="bolo.png" alt="Nome do Prato 9">
+            <h2>Prato 9</h2>
+            <p class="description">Bolo de chocolate com calda de chocolate e confete de chocolate com Morango com cima do bolo.</p>
+            <span class="speak" onclick="speak(this.previousElementSibling.innerText)">Ouvir Descrição</span>
+        </div>
+    </div>
+
+    <script>
+        function speak(description) {
+            var msg = new SpeechSynthesisUtterance(description);
+            window.speechSynthesis.speak(msg);
+        }
+    </script>
+</body>
+</html>
